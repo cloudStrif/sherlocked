@@ -1,0 +1,99 @@
+<section class="relative min-h-screen pt-32 pb-20 flex flex-col justify-center overflow-hidden">
+  
+  <!-- Fond dynamique cinématique -->
+  <div class="absolute inset-0 pointer-events-none">
+    <!-- Image de fond avec filtre sombre cinéma -->
+    <div
+      class="absolute inset-0 bg-cover bg-center filter brightness-[0.25] saturate-125 scale-105 animate-in fade-in duration-1000"
+      style="background-image: url('https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2000&auto=format&fit=crop');"
+    ></div>
+
+    <!-- Gradients & Glows -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[#08090d]/80 via-[#08090d]/60 to-[#08090d]"></div>
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-cyan-500/15 rounded-full blur-[140px]"></div>
+    <div class="absolute bottom-10 right-10 w-[450px] h-[450px] bg-blue-600/10 rounded-full blur-[120px]"></div>
+    <div class="absolute inset-0 bg-radial-grid opacity-30"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
+    
+    <!-- Badges supérieurs -->
+    <div class="flex flex-wrap items-center gap-2.5 mb-6">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/70 border border-cyan-500/40 text-cyan-300 text-xs font-mono font-medium tracking-wide shadow-[0_0_20px_rgba(6,182,212,0.3)]">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+        <span>OPÉRATEUR HOMOLOGUÉ DGAC S1 • S2 • S3 PARIS</span>
+      </span>
+      <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs font-mono">
+        <span>🎬 CINÉMA 6K APPLE PRORES &amp; RAW</span>
+      </span>
+      <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs font-mono">
+        <span>⚡ FPV 140 KM/H</span>
+      </span>
+    </div>
+
+    <!-- Titre Principal -->
+    <div class="max-w-4xl space-y-4">
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-display tracking-tight text-white leading-[1.08]">
+        L'Excellence de la <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-500">
+          Prise de Vues Aériennes
+        </span>
+        <br /> par Drone &amp; FPV.
+      </h1>
+
+      <p class="text-base sm:text-xl text-slate-300 font-normal leading-relaxed max-w-3xl pt-2">
+        Société parisienne fondée par <strong>Bertrand Debeuret</strong>. Partenaire privilégié du <strong>Cinéma</strong>, de la <strong>Télévision</strong> (<em>Secrets d'Histoire</em>), des grandes <strong>marques automobiles</strong> et du <strong>Direct Broadcast mondial</strong> (<em>Roland-Garros</em>).
+      </p>
+    </div>
+
+    <!-- Actions & CTA -->
+    <div class="mt-8 sm:mt-10 flex flex-wrap items-center gap-4">
+      <a
+        href="#contact"
+        class="px-7 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-sm sm:text-base shadow-[0_0_30px_rgba(6,182,212,0.45)] hover:shadow-[0_0_40px_rgba(6,182,212,0.65)] hover:scale-102 active:scale-98 transition-all flex items-center gap-3 cursor-pointer"
+      >
+        <span>Demander une étude de tournage</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+
+      <a
+        href="#portfolio"
+        class="px-6 py-4 rounded-2xl bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white border border-white/10 hover:border-cyan-500/40 font-semibold text-sm sm:text-base backdrop-blur-sm transition-all flex items-center gap-2"
+      >
+        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>Voir nos réalisations vidéo</span>
+      </a>
+
+      <a
+        [href]="'tel:' + contact.phone"
+        class="sm:ml-auto flex items-center gap-3 px-4 py-3 rounded-2xl bg-slate-900/60 border border-slate-800 text-xs font-mono text-slate-300 hover:text-cyan-300 transition-colors"
+      >
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Ligne directe télépilote : <strong>{{ contact.phone }}</strong></span>
+      </a>
+    </div>
+
+    <!-- Bandeau Chiffres Clés -->
+    <div class="mt-16 sm:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pt-10 border-t border-white/10">
+      @for (stat of stats; track stat.label) {
+        <div class="p-5 rounded-2xl bg-[#0c0e14]/60 border border-white/5 backdrop-blur-sm hover:border-cyan-500/30 transition-all group">
+          <div class="text-3xl sm:text-4xl lg:text-5xl font-black font-display text-white group-hover:text-cyan-400 transition-colors tracking-tight">
+            {{ stat.value }}
+          </div>
+          <div class="mt-1 text-sm font-bold text-slate-200">
+            {{ stat.label }}
+          </div>
+          <div class="text-xs text-slate-400 font-mono mt-0.5">
+            {{ stat.detail }}
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

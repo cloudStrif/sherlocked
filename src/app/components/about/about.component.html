@@ -1,0 +1,87 @@
+<section id="a-propos" class="py-24 relative bg-[#0b0c12]">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Portrait & Visuel Cinéma -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-3xl overflow-hidden border border-cyan-500/30 shadow-[0_0_50px_rgba(6,182,212,0.2)]">
+          <img
+            src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?q=80&w=1000&auto=format&fit=crop"
+            alt="Bertrand Debeuret - Télépilote et réalisateur AIRbuzz"
+            class="w-full h-[460px] object-cover filter brightness-90"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0c0e14] via-transparent to-transparent"></div>
+          
+          <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-black/80 backdrop-blur-md border border-white/10">
+            <div class="text-base font-bold font-display text-white">{{ contact.founder }}</div>
+            <div class="text-xs font-mono text-cyan-400">{{ contact.role }}</div>
+            <div class="text-[11px] text-slate-400 mt-1">18 rue Lebouteux • 75017 Paris</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Présentation & Philosophie -->
+      <div class="lg:col-span-7 space-y-6">
+        <div>
+          <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest font-bold">À PROPOS D'AIRBUZZ</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white mt-1">
+            L'œil d'un cinéaste, la rigueur d'un aviateur.
+          </h2>
+        </div>
+
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Fondée par <strong>Bertrand Debeuret</strong>, AIRbuzz est née d'une conviction profonde : un beau plan aérien ne se résume pas à faire voler une caméra dans les airs. C'est avant tout un geste de mise en scène, un rythme, une compréhension intime de la lumière et de l'espace.
+        </p>
+
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Que ce soit pour les exigences de diffusion du service public (<em>Secrets d'Histoire</em>, <em>Des Racines et des Ailes</em>), les cadences infernales des tournages publicitaires automobiles ou l'adrénaline du direct à <em>Roland-Garros</em>, AIRbuzz apporte des réponses techniques sans faille.
+        </p>
+
+        <!-- Piliers -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+          
+          <div class="p-4 rounded-2xl bg-white/5 border border-white/5 space-y-1">
+            <div class="text-xs font-bold text-white font-mono flex items-center gap-2">
+              <span class="text-cyan-400">&bull;</span>
+              <span>Sensibilité artistique pure</span>
+            </div>
+            <p class="text-xs text-slate-400">
+              Dialogue direct avec les réalisateurs et directeurs de la photographie pour trouver l'axe exact.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white/5 border border-white/5 space-y-1">
+            <div class="text-xs font-bold text-white font-mono flex items-center gap-2">
+              <span class="text-cyan-400">&bull;</span>
+              <span>Sécurité aéronautique totale</span>
+            </div>
+            <p class="text-xs text-slate-400">
+              Assurance RC aéronef professionnelle jusqu'à plusieurs millions d'euros et protocoles DGAC validés.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="pt-4 flex items-center gap-4">
+          <a
+            href="#contact"
+            class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xs shadow-lg transition-all"
+          >
+            Échanger avec Bertrand Debeuret
+          </a>
+          <a
+            [href]="'tel:' + contact.phone"
+            class="text-xs font-mono text-cyan-400 hover:text-cyan-300 font-semibold"
+          >
+            Ligne directe : {{ contact.phone }}
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

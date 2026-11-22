@@ -1,0 +1,27 @@
+<section id="references" class="py-20 relative bg-[#08090d] border-y border-white/5">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest font-bold">CONFIANCE &amp; EXCELLENCE</span>
+      <h3 class="text-2xl sm:text-3xl font-extrabold font-display text-white mt-1">
+        Ils nous confient leurs images les plus précieuses.
+      </h3>
+    </div>
+
+    <!-- Grille de logos / références -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+      @for (ref of references; track ref.name) {
+        <div class="p-5 rounded-2xl bg-[#0c0e14] border border-white/5 hover:border-cyan-500/40 transition-all text-center group flex flex-col justify-center items-center h-28 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)]">
+          <div class="text-lg font-black font-display tracking-tight text-white/80 group-hover:text-cyan-400 transition-colors">
+            {{ ref.logoText }}
+          </div>
+          <div class="text-[10px] font-mono text-slate-400 mt-1 line-clamp-1">
+            {{ ref.category }}
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

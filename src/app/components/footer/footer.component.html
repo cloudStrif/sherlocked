@@ -1,0 +1,67 @@
+<footer class="bg-[#050608] border-t border-white/10 text-slate-400 text-xs py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <!-- Colonne 1 : Brand & Mission -->
+      <div class="space-y-4 md:col-span-2">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2v4m0 12v4M2 12h4m12 0h4" />
+            </svg>
+          </div>
+          <span class="text-xl font-bold font-display text-white">AIR<span class="text-cyan-400">buzz</span></span>
+        </div>
+        <p class="text-slate-400 text-xs max-w-md leading-relaxed">
+          Société de prises de vues aériennes par drone professionnel, cinéma 6K RAW et captation FPV basée à Paris. Opérateur agréé DGAC pour les tournages en zone peuplée (S3), fictions TV et direct broadcast mondial.
+        </p>
+        <div class="flex items-center gap-2 text-[11px] font-mono text-cyan-400">
+          <span>&bull; Correspondant officiel HOsiHO Drone Network (75 Ouest, 78, 91, 92, 95, 45, 28)</span>
+        </div>
+      </div>
+
+      <!-- Colonne 2 : Navigation -->
+      <div class="space-y-3">
+        <div class="font-mono text-white text-xs uppercase font-bold tracking-wider">Navigation</div>
+        <ul class="space-y-2">
+          <li><a href="#services" class="hover:text-cyan-400 transition-colors">Prestations &amp; Tournages</a></li>
+          <li><a href="#portfolio" class="hover:text-cyan-400 transition-colors">Portfolio &amp; Crédits TV</a></li>
+          <li><a href="#flotte" class="hover:text-cyan-400 transition-colors">Flotte &amp; Caméras 6K</a></li>
+          <li><a href="#reglementation" class="hover:text-cyan-400 transition-colors">Législation DGAC S1-S2-S3</a></li>
+          <li><a href="#references" class="hover:text-cyan-400 transition-colors">Nos Références Clients</a></li>
+          <li><a href="#a-propos" class="hover:text-cyan-400 transition-colors">À propos de Bertrand Debeuret</a></li>
+        </ul>
+      </div>
+
+      <!-- Colonne 3 : Contact & Siège -->
+      <div class="space-y-3">
+        <div class="font-mono text-white text-xs uppercase font-bold tracking-wider">Contact Direct</div>
+        <div class="space-y-2 font-mono text-[11px]">
+          <div>Tél : <a [href]="'tel:' + contact.phone" class="text-white hover:text-cyan-400 font-bold">{{ contact.phone }}</a></div>
+          <div>Email : <a [href]="'mailto:' + contact.email" class="text-cyan-400 hover:underline">{{ contact.email }}</a></div>
+          <div class="pt-2 text-slate-400">
+            {{ contact.address }}<br />
+            {{ contact.postalCode }} {{ contact.city }}, France
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bas de page & Copyright -->
+    <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-slate-400">
+      <div>
+        &copy; {{ currentYear }} {{ contact.name }} — Tous droits réservés. Fondé par Bertrand Debeuret.
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Télépilote Déclaré DGAC</span>
+        <span>&bull;</span>
+        <span>Assurance RC Aéronef Professionnelle</span>
+        <span>&bull;</span>
+        <a href="#contact" class="text-cyan-400 hover:underline">Demande de devis</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
