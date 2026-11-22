@@ -11,6 +11,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>
+    window.addEventListener('error', function(e) {
+      if (!document.getElementById('debug-error-box')) {
+        var box = document.createElement('div');
+        box.id = 'debug-error-box';
+        box.style.cssText = 'position:fixed;bottom:20px;left:20px;right:20px;background:#991b1b;color:white;padding:16px;z-index:999999;font-family:monospace;font-size:12px;border-radius:12px;border:1px solid #f87171;box-shadow:0 10px 40px rgba(0,0,0,0.8);white-space:pre-wrap;';
+        box.textContent = 'ERREUR JS RUNTIME : ' + (e.message || e.error || 'Erreur inconnue') + '\nSource : ' + (e.filename || '') + ':' + (e.lineno || '');
+        document.body.appendChild(box);
+      }
+    });
+  </script>
 </head>
 <body class="bg-[#08090d] text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-black min-h-screen">
   <app-root></app-root>
